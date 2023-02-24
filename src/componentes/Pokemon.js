@@ -1,7 +1,43 @@
 import React from "react";
 import "../css/pokemon.css";
 
-const Pokemon = (props) => {
+
+/* 
+const Pokemon = ({type,avatar, id, name, powerLevel, agressive}) => {
+	return (
+		<div className="contenedor-pokemon">
+			<div className="contenedor-pokemon-unico">
+				<p className="tipo-pokemon">
+					<strong>{type}</strong>
+				</p>
+				<img
+					className="imagen-pokemon"
+					src={require(`${avatar}`)}
+					alt="imagen de{name}"
+				/>
+				<p className="id-pokemon">
+					<strong>{id}</strong>
+				</p>
+				<p className="name-pokemon">
+					<strong>{name}</strong>
+				</p>
+				<p className="powerlevel-pokemon">
+					Nivel de poder: <strong>{powerLevel}</strong>
+				</p>
+				<p className="agresivo-pokemon" value={{agressive}}>
+					<img src={require(`../img/angy.png`)} alt="imagen de estado" />
+				</p>
+			</div>
+		</div>
+	);
+};
+
+export default Pokemon;
+ */
+
+
+
+ const Pokemon = (props) => {
 	return (
 		<div className="contenedor-pokemon">
 			<div className="contenedor-pokemon-unico">
@@ -30,4 +66,4 @@ const Pokemon = (props) => {
 	);
 }
 
-export default Pokemon;
+export default Pokemon;  

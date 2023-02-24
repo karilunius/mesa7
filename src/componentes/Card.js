@@ -1,8 +1,33 @@
-//import React, { Component, Fragment } from "react";
-import React from "react";
+
 import "../css/card.css";
 import Pokemon from "./Pokemon.js";
-//import Data from '../Data.json';
+import Data from '../Data.json';
+
+/* 
+const Card = () => {
+
+	return (
+		<div className="Card">
+			<div className="contenedor-card">
+					{Data.map(pokemon => 
+						<Pokemon
+							type="Fire"
+							avatar={pokemon.avatar}
+							id={pokemon.id}
+							name={pokemon.name}
+							powerLevel={pokemon.powerLevel}
+							agressive={pokemon.agressive}
+						/>
+					
+					)}
+			</div>
+		</div>
+	)
+};
+export default Card;
+
+ */
+
 
 function Card() {
 	return (
@@ -27,5 +52,6 @@ function Card() {
 			</div>
 		</div>
 	);
-}
+} 
+
 export default Card;
