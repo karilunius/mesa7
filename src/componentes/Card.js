@@ -1,22 +1,31 @@
 //import React, { Component, Fragment } from "react";
-import React from 'react';
+import React from "react";
 import "../css/card.css";
-import Pokemon from './Pokemon.js';
+import Pokemon from "./Pokemon.js";
 //import Data from '../Data.json';
 
-
-class Card extends React.Component {
-	render() {
-		return (
+function Card() {
+	return (
+		<div className="Card">
 			<div className="contenedor-card">
-				<h2 className='card-tipo'>
-					<strong>Water</strong>
-				</h2>
-				<Pokemon />
+				<Pokemon
+					type="Water"
+					img="pokemon"
+					id="1"
+					name="Pokemon"
+					powerLevel="70"
+					agressive="true"
+				/>
+				<Pokemon
+					type="Fire"
+					img="pokemon"
+					id="2"
+					name="Pokemon"
+					powerLevel="70"
+					agressive="true"
+				/>
 			</div>
-		);
-	}
+		</div>
+	);
 }
 export default Card;
-
-

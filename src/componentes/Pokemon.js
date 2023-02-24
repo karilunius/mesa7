@@ -5,20 +5,25 @@ const Pokemon = (props) => {
 	return (
 		<div className="contenedor-pokemon">
 			<div className="contenedor-pokemon-unico">
+				<p className="tipo-pokemon">
+					<strong>{props.type}</strong>
+				</p>
 				<img
 					className="imagen-pokemon"
-					src={require("../img/pokemon.png")}
-					alt="imagen de pokemon"
+					src={require(`../img/${props.img}.png`)}
+					alt="imagen de{props.name}"
 				/>
 				<p className="id-pokemon">
-					<strong>1</strong>
+					<strong>{props.id}</strong>
 				</p>
-				<p className="nombre-pokemon">
-					<strong>pokemon</strong>
+				<p className="name-pokemon">
+					<strong>{props.name}</strong>
 				</p>
-				<p className="powerlevel-pokemon">nivel 7</p>
-				<p className="tipo-pokemon">
-					<strong>tipo agresivo</strong>
+				<p className="powerlevel-pokemon">
+					Nivel de poder: <strong>{props.powerLevel}</strong>
+				</p>
+				<p className="agresivo-pokemon" value="{props.agressive}">
+					<img src={require(`../img/angy.png`)} alt="imagen de estado" />
 				</p>
 			</div>
 		</div>
@@ -26,37 +31,3 @@ const Pokemon = (props) => {
 }
 
 export default Pokemon;
-
-
-
-
-/* const Pokemon = (props) => {
-	return (
-        <div className="contenedor-pokemon">
-            <img
-				className="imagen-pokemon"
-				src={require(`${props.avatar}`)}
-				alt="imagen de {props.name}"
-            />
-            <div className="contenedor-pokemon-unico">
-                <p className="id-pokemon">
-					<strong>{props.id}</strong>
-				</p>
-				<p className="nombre-pokemon">
-					<strong>{props.name}</strong>
-                </p>
-                <p className="powerlevel-pokemon">
-					{props.powerLevel}
-                </p>
-                <p className="tipo-pokemon">
-					<strong>{props.agressive}</strong>
-				</p>
-				
-			</div>
-
-
-        </div>
-	)
-}
-
-export default Pokemon; */

@@ -1,4 +1,4 @@
-import "./App.css";
+import "./css/app.css";
 import React from "react";
 import Card from "./componentes/Card.js";
 
