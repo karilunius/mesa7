@@ -1,0 +1,34 @@
+Parameters:
+  InstanceType:
+    Type: String
+    Default: t2.micro
+    AllowedValues: [t2.micro, t2.small, t2.medium]
+    Description: instancia EC2 
+
+Resources:
+  MyEC2Instance:
+    Type: "AWS::EC2::Instance"
+    Properties:
+      InstanceType: t2.micro
+      ImageId: ami-09cd747c78a9add63
+      KeyName: test
+      Tags: 
+        - Key: BucketC8m7
+          Value: "Instancia_CloudFormation"
+      SecurityGroups:        
+        - Ref: MySecurityGroup
+  
+  MySecurityGroup:
+    Type: "AWS::EC2::SecurityGroup"
+    Properties:
+      GroupDescription: "trafico SSH"
+      SecurityGroupIngress:
+        - IpProtocol: tcp
+          FromPort: 22
+          ToPort: 22
+          CidrIp: 0.0.0.0/0 
+
+Outputs:
+  PrivateIP:
+    Description: "Dirección IP privada de la instancia de EC2"
+    Value: !GetAtt MyEC2Instance.PublicIp

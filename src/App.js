@@ -8,8 +8,7 @@ const App = () => {
 		<div className="App">
 			<div className="contenedor-principal">
 				<h1>Pokemon Cards</h1>
-				<Card
-				/>
+				<Card />
 			</div>
 		</div>
 	);

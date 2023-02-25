@@ -3,6 +3,50 @@ import "../css/card.css";
 import Pokemon from "./Pokemon.js";
 import Data from '../Data.json';
 
+
+
+
+function Card() {
+
+	const type = ["fire","water","electric","air"];
+	
+	return (
+		<div className="Card">
+			<div className="contenedor-card">
+				
+				{
+
+			
+
+					
+					type.map((elemento) => (
+						<div key={elemento}>
+						
+						{
+							Data[elemento].map((pokemon) => (
+							    <Pokemon key={pokemon.id}{...pokemon} type={elemento} />
+								))
+						
+						}
+					
+					    </div>
+					))
+
+				}
+
+			</div>
+		</div>
+	);
+}
+
+export default Card;
+
+
+
+
+
+
+
 /* 
 const Card = () => {
 
@@ -26,9 +70,10 @@ const Card = () => {
 };
 export default Card;
 
- */
+ {...dataPokemon.water}*/
 
 
+/* 
 function Card() {
 	return (
 		<div className="Card">
@@ -55,3 +100,4 @@ function Card() {
 } 
 
 export default Card;
+ */
